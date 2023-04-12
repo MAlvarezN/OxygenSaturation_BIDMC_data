@@ -32,10 +32,16 @@ end
 Figure shows a PPG signals took from the first register of BIDMC dataset. The cut-interval is randomly selected as example with three pulses. The x-axis represents the samping points and y-axis the intensity registered.
 ![PPG signal from BIDMC dataset](https://github.com/MAlvarezN/OxygenSaturation_BIDMC_data/blob/553684e8563484b63c21b6b571f4b1715a832f29/sample_PPGsignal.png)
 
-## DL Model
-In this instructive reposotory we present a Deep Learning model (based on [PP-net](https://doi.org/10.1109/JSEN.2020.2990864)) to estimate the Oxygen saturation from a single PPG signal.
+## DL Models
 
+In this instructive reposotory we present Deep Learning models: (a) Model based on [PP-net](https://doi.org/10.1109/JSEN.2020.2990864), and (b) LSTM model; to estimate the Oxygen saturation from a single PPG signal.
+
+(a) Model based on [PP-net](https://doi.org/10.1109/JSEN.2020.2990864)
 ![Example DL model](https://github.com/MAlvarezN/OxygenSaturation_BIDMC_data/blob/14c87e105f57e630471ece22c3208e59ad23e67a/ModelBasedPPNet_h.PNG)
+
+(b) LSTM model
+
+<img src="https://github.com/MAlvarezN/OxygenSaturation_BIDMC_data/blob/0f2baba542a47eabb1ed88e17e4b58b08bfd229a/Model_lstm_h.PNG" width="350" height="140">
 
 ### Parameters
 
@@ -52,6 +58,13 @@ options = trainingOptions('adam', ...
     'Plots','training-progress');
 ```
 ### Results
-The mean error for testing samples is 16.06, with a few extreme values with error close to 28%.
+(a) Model based on [PP-net](https://doi.org/10.1109/JSEN.2020.2990864)
 
-<img src="https://github.com/MAlvarezN/OxygenSaturation_BIDMC_data/blob/b1261d38ed213d3a5d44924be3bab641ab95a2ad/Error_based_PPnet.png" width="600" height="600">
+The mean error for testing samples is 16.06%, with few outlier values with error close to 28%.
+
+<img src="https://github.com/MAlvarezN/OxygenSaturation_BIDMC_data/blob/b1261d38ed213d3a5d44924be3bab641ab95a2ad/Error_based_PPnet.png" width="600" height="500">
+
+(b) LSTM model
+The mean error for testing samples is 2.39%, with few outlier values with error close to 15%.
+
+<img src="https://github.com/MAlvarezN/OxygenSaturation_BIDMC_data/blob/817c17792945933ffa907291f03b1e2698ba8427/Error_LSTM.png" width="600" height="500">
