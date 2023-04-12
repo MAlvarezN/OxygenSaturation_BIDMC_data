@@ -54,3 +54,4 @@ options = trainingOptions('adam', ...
 ### Results
 The mean error for testing samples is 16.06, with a few extreme values with error close to 28%.
 
+<img src="https://github.com/MAlvarezN/OxygenSaturation_BIDMC_data/blob/b1261d38ed213d3a5d44924be3bab641ab95a2ad/Error_based_PPnet.png" width="600" height="600">
