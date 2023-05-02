@@ -1,4 +1,4 @@
-# OxygenSaturation_BIDMC_data
+# OxygenSaturation_BIDMC_data Predictio Using DNN
 This repository contains instructions to estimate Oxygen Saturation from BIDMC data using simple Deep Learning models
 
 
